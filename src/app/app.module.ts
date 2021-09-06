@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CardsComponent } from './Cards/Cards.component';
 import { FooterComponent } from './Footer/Footer.component';
+import { GridComponent } from './Grid/Grid.component';
+
 import { TopHeaderComponent } from './Header/TopHeader.component';
 
 
@@ -12,7 +14,8 @@ import { TopHeaderComponent } from './Header/TopHeader.component';
     AppComponent,
     TopHeaderComponent,
     FooterComponent,
-   CardsComponent
+    CardsComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule
