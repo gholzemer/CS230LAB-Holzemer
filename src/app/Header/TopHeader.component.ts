@@ -2,8 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
 selector: 'TopHeader',
-templateUrl: 'TopHeader.component.html'
+templateUrl: 'TopHeader.component.html',
+styleUrls: ['./TopHeader.component.css'],
+styles: [`
 
+
+`]
 })
 
 
