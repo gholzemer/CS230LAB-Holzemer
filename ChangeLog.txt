@@ -1,0 +1,11 @@
+ChangeLog
+
+Commit Contains:
+
+Revision of Cards and Grids to remove majority of CSS and simplify
+
+Additional Components: Layout, TopCards, and Test
+
+Test component is for testing purposes and is not used in app.component
+Layout is used and required in assignment
+TopCards is a new component made to simplify more code coming from Cards
