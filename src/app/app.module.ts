@@ -7,6 +7,9 @@ import { FooterComponent } from './Footer/Footer.component';
 import { GridComponent } from './Grid/Grid.component';
 
 import { TopHeaderComponent } from './Header/TopHeader.component';
+import { LayoutComponent } from './Layout/Layout.component';
+import { TestComponent } from './Test/Test.component';
+import { TopCardsComponent } from './TopCards/TopCards.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { TopHeaderComponent } from './Header/TopHeader.component';
     TopHeaderComponent,
     FooterComponent,
     CardsComponent,
-    GridComponent
+    GridComponent,
+    LayoutComponent,
+    TestComponent,
+    TopCardsComponent
   ],
   imports: [
     BrowserModule

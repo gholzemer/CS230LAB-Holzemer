@@ -12,6 +12,10 @@ styles: [`
 
 
 export class GridComponent {
-
+    LM:String = "Learn More";
+    SN:String = "Shop Now";
+    Misc:String = ">";
+    B:String = "Buy";
+    Enjoy:String = "Enjoy Special Priviliges";
 
 }

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-selector: 'Cards',
-templateUrl: 'Cards.component.html',
-styleUrls: ['./Cards.component.css'],
+selector: 'Layout',
+templateUrl: 'Layout.component.html',
+styleUrls: ['./Layout.component.css'],
 styles: [`
 
 
@@ -11,7 +11,7 @@ styles: [`
 })
 
 
-export class CardsComponent {
+export class LayoutComponent {
     RIG:String = "RAZER ISKUR GAMING CHAIR";
     Intel:String = "INTEL GAMER DAYS FESTIVAL OF DEALS"
     
