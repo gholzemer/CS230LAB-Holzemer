@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-selector: 'Layout',
-templateUrl: 'Layout.component.html',
-styleUrls: ['./Layout.component.css'],
+selector: 'mobile',
+templateUrl: 'mobile.component.html',
+styleUrls: ['./mobile.component.css'],
 styles: [`
 
 
@@ -11,10 +11,9 @@ styles: [`
 })
 
 
-export class LayoutComponent {
-    title = "Home";
+export class mobileComponent {
     RIG:String = "RAZER ISKUR GAMING CHAIR";
-    Intel:String = "INTEL GAMER DAYS FESTIVAL OF DEALS";
+    Intel:String = "INTEL GAMER DAYS FESTIVAL OF DEALS"
     
     D2:String = "To help you achieve perfect gaming form in front of your computer, the Razer Iskur range focuses on giving you full-range support that maintains your posture and minimizes muscle fatigue.";
 

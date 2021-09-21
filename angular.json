@@ -30,15 +30,18 @@
               "src/app/Images/logIn.png",
               "C:/Users/gholz/sportify/src/app/Images/Orders.PNG",
               "src/app/Images/Search.png",
-              "src/app/Images/ShoppingCart.png"
+              "src/app/Images/ShoppingCart.png",
+              "C:/Users/gholz/sportify/src/assets/Images/Xbox logo.pngg"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/aos/dist/aos.css"
             ]
             ,
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "node_modules/aos/dist/aos.js"
 
             ]
           },
