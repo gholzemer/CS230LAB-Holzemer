@@ -42,3 +42,7 @@ div a p{
     color:white;
   
   }
+  body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }

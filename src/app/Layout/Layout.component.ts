@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { mock_TopCards } from '../TopCards/mock_TopCards';
+import { TopCard } from '../TopCards/TopCard.model';
+
+
+
 
 @Component({
 selector: 'Layout',
@@ -12,6 +17,18 @@ styles: [`
 
 
 export class LayoutComponent {
+
+    topcards:TopCard[] = [];
+
+    constructor(){
+        for(var topcards of mock_TopCards){
+            this.topcards.push(new TopCard(topcards));
+        }
+    }
+
+  
+
+
     title = "Home";
     RIG:String = "RAZER ISKUR GAMING CHAIR";
     Intel:String = "INTEL GAMER DAYS FESTIVAL OF DEALS";

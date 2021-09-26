@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 selector: 'TopCards',
@@ -12,6 +12,15 @@ styles: [`
 
 
 export class TopCardsComponent {
+    @Input()
+    title! :string;
+    @Input()
+    description! :string;
+    @Input()
+    imagePath! :string;
+    
+
+
     RIG:String = "RAZER ISKUR GAMING CHAIR";
     Intel:String = "INTEL GAMER DAYS FESTIVAL OF DEALS"
     

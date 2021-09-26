@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { mock_TopCards } from './mock_TopCards';
+import { TopCard } from './TopCard.model';
 
 @Component({
 selector: 'mobile',
@@ -12,6 +14,14 @@ styles: [`
 
 
 export class mobileComponent {
+
+    topcards:TopCard[] = [];
+
+    constructor(){
+        for(var topcards of mock_TopCards){
+            this.topcards.push(new TopCard(topcards));
+        }
+    }
     RIG:String = "RAZER ISKUR GAMING CHAIR";
     Intel:String = "INTEL GAMER DAYS FESTIVAL OF DEALS"
     

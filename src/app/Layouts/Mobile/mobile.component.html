@@ -7,7 +7,9 @@
 <div class = "d-flex flex-column bd-higlight bg-dark" style = "border-bottom: lawngreen solid 1px;"><!--row-->
     <div class = "flex-row "><!--col-->
        
-        <TopCards>Loading</TopCards>
+      <div *ngFor= "let TopCard of topcards;">
+        <TopCards title = {{TopCard.title}} description = {{TopCard.description}} imagePath = {{TopCard.imagePath}}>Loading</TopCards>
+        </div>
         
     </div><!--end row-->
 </div><!--end col-->

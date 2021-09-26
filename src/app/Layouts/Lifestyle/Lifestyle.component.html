@@ -4,33 +4,11 @@
     <div class = ""><!--dec-->
         <div class = "d-flex flex-column bd-higlight bg-dark"><!--row-->
             <div class = "flex-row "><!--col-->
-                <TopCards>Loading</TopCards>
+                <div *ngFor= "let TopCard of topcards;">
+                    <TopCards title = {{TopCard.title}} description = {{TopCard.description}} imagePath = {{TopCard.imagePath}} description2 = "2">Loading</TopCards>
+                    </div>
                 
             </div><!--end row-->
-            <div class = "flex-row mt-2">
-                <TopCards>Loading</TopCards>    
-            </div>
-            <div class = "flex-row mt-2">
-                <TopCards>Loading</TopCards>  
-            </div>
-            <div class = "flex-row "><!--col-->
-                <TopCards>Loading</TopCards>
-                
-            </div><!--end row-->
-            <div class = "flex-row mt-2">
-                <TopCards>Loading</TopCards>    
-            </div>
-            <div class = "flex-row mt-2">
-                <TopCards>Loading</TopCards>  
-            </div>
-            <div class = "flex-row "><!--col-->
-                <TopCards>Loading</TopCards>
-                
-            </div><!--end row-->
-            <div class = "flex-row mt-2">
-                <TopCards>Loading</TopCards>    
-            </div>
-            
         </div><!--end col-->
     </div>
 </body>
