@@ -26,7 +26,8 @@ import { NotificationNavBarComponent } from './NotificationNavBar/NotificationNa
 import { ShortCardComponent } from './ShortCard/ShortCard.component';
 import { TestComponent } from './Test/Test.component';
 import { TopCardsComponent } from './TopCards/TopCards.component';
-
+import { HttpClientModule} from '@angular/common/http';
+import { userinfoComponent } from './Header/user-info.component';
 
 @NgModule({
   declarations: [
@@ -48,11 +49,16 @@ import { TopCardsComponent } from './TopCards/TopCards.component';
     NotificationNavBarComponent,
     AnimatedNavbarComponent,
     ShortCardComponent,
-    LongCardsComponent
+    LongCardsComponent,
+    userinfoComponent
+
+
   ],
   imports: [
     BrowserModule,
-    appRoutingModule
+    appRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
