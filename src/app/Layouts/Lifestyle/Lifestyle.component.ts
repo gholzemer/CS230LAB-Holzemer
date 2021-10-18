@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { mock_TopCards } from './mock_TopCards';
-import { TopCard } from './TopCard.model';
+import { LifestyleInfoService } from './Lifestyle.service';
+//import { mock_TopCards } from './mock_TopCards';
+import { TopCard } from "src/app/TopCards/TopCard.model";
 
 @Component({
 selector: 'Lifestyle',
@@ -14,13 +15,33 @@ styles: [`
 
 
 export class LifestyleComponent {
-    topcards:TopCard[] = [];
+     //topcards:TopCard[] = [];
 
-    constructor(){
-        for(var topcards of mock_TopCards){
-            this.topcards.push(new TopCard(topcards));
-        }
+    //topcards:TopCard[] = [];
+    myCards: TopCard[] = [];
+    constructor(private dataService: LifestyleInfoService){
+         
+        
     }
+    ngOnInit(): void{
+        
+        this.showUserinfo();
+    }
+
+  
+
+    
+    showUserinfo(){
+        this.dataService.getUserInfo().subscribe((data: TopCard[]) => {
+          for(var item in data){
+            console.log(data[item]);
+              this.myCards.push(data[item]);
+            //this.myCards.push(new TopCard(myCards));
+          }
+            
+        })
+    }
+
 
     RIG:String = "RAZER ISKUR GAMING CHAIR";
     Intel:String = "INTEL GAMER DAYS FESTIVAL OF DEALS"

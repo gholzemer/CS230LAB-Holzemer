@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { mock_TopCards } from '../TopCards/mock_TopCards';
 import { TopCard } from '../TopCards/TopCard.model';
-
+//import { HttpClient } from '@angular/common/http';
+import { Component, Injectable, OnInit } from '@angular/core';
+//import { UserInfo } from '../Header/user-info.model';
+import { LayoutInfoService } from './Layout.service';
 
 
 
@@ -16,17 +17,39 @@ styles: [`
 })
 
 
-export class LayoutComponent {
+export class LayoutComponent implements OnInit  {
 
-    topcards:TopCard[] = [];
+    //topcards:TopCard[] = [];
 
-    constructor(){
-        for(var topcards of mock_TopCards){
-            this.topcards.push(new TopCard(topcards));
-        }
+    //topcards:TopCard[] = [];
+    myCards: TopCard[] = [];
+    constructor(private dataService: LayoutInfoService){
+         
+        
+    }
+    ngOnInit(): void{
+        
+        this.showUserinfo();
     }
 
   
+
+    
+    showUserinfo(){
+        this.dataService.getUserInfo().subscribe((data: TopCard[]) => {
+          for(var item in data){
+            console.log(data[item]);
+              this.myCards.push(data[item]);
+            //this.myCards.push(new TopCard(myCards));
+          }
+            
+        })
+    }
+
+
+
+
+
 
 
     title = "Home";

@@ -1,17 +1,21 @@
 
 
 <NotificationNavBar>Loading</NotificationNavBar>
+<div *ngIf= "myCards == undefined">Failed Fetching User Info</div>
 
-
+<div *ngIf = "myCards != undefined">
 <div class = ""><!--dec-->
     <div class = "d-flex flex-column bd-higlight bg-dark"><!--row-->
         <div class = "flex-row "><!--col-->
-            <div *ngFor= "let TopCard of topcards;">
-            <TopCards title = {{TopCard.title}} description = {{TopCard.description}} imagePath = {{TopCard.imagePath}}>Loading</TopCards>
-            </div>
+
+        <div *ngFor= "let cardx of myCards;">
+            <TopCards title = {{cardx.title}} description = {{cardx.description}} imagePath = {{cardx.imagePath}}>Loading</TopCards>
+         </div>
+
         </div><!--end row-->
        
     </div><!--end col-->
+</div>
 </div>
 
 <Cards></Cards>

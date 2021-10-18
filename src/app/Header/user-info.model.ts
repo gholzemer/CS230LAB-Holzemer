@@ -5,5 +5,4 @@ export interface UserInfo {
     Github: string;
     mix_id: string;
 
-
 }
