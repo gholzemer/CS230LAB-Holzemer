@@ -1,0 +1,86 @@
+
+<div *ngIf= "UserInfo == undefined" >
+    <h4 class = "navbar justify-content-center  mb-0" style = "border-top: 2px solid lawngreen;  background-color: rgba(36, 35, 35, 0.815);">
+        
+        <div class ="text-light fade show fs-6">Want To See Your Orders and Wish List? Login  <span class = "ms-2">-></span>  </div>
+        <a class = "btn nav-link fs-6 hover-underline-animation" style = "color: lawngreen;" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" target = "_self">Here ></a>
+        
+    </h4>
+</div>
+  
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+   
+<div *ngIf= "UserInfo == undefined" style = "padding-bottom: 8000px; background-color: rgba(46, 45, 45, 0.815); color: white;">
+    <div class="offcanvas-header" style= "background: black; background: solid 2px lawngreen;">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Login / Create Account</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+
+    
+    <form #postForm = "ngForm" (ngSubmit) = "onLoginForm(postForm.value)">
+        <div *ngIf= "UserInfo == undefined">
+        <div class="offcanvas-body">
+            <div class="input-group">
+                <span class="input-group mb-2">First Name</span>
+                <input type="text" id = "FirstName" placeholder = "Ex. John" ngModel name="FirstName" class="form-control">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group mb-2">Last Name</span>
+                <input type="text" id = "LastName" placeholder = "Ex. Smith" ngModel name = "LastName" class="form-control">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group mb-2">User Name</span>
+                <input type="text" id="UserName" placeholder = "Anything..." ngModel name = "UserName" class="form-control">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group mb-2">Password</span>
+                <input type="text" id="Password" placeholder = "Ex. 1234" ngModel name = "Password" class="form-control">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group mb-2">Verify Password</span>
+                <input type="text" id="VerifyPassword" placeholder = "Must Match" ngModel name = "VerifyPassword" class="form-control">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group mb-2">Email</span>
+                <input type="text" id="Email" placeholder = "Ex. JohnSmith1234@gmail.com" ngModel name = "Email" class="form-control">
+                
+            </div>
+            <button class = "text-end btn btn-dark mt-4 ms-4" type = "submit">Create Account</button>
+        </div>
+    </div>
+    </form>
+</div>
+<div *ngIf = "UserInfo != undefined" class = "text-white" style = "background-color: rgba(46, 45, 45, 0.815); padding-bottom: 800px; ">
+
+    <div class="offcanvas-header text-white bg-black">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Account</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+
+</div>
+<h4 class = "navbar justify-content-center pt-4 pb-4 mb-0" style = "border-top: 2px solid lawngreen;  background-color: rgba(46, 45, 45, 0.815);">
+    
+    <div class ="text-light fade show fs-6">Logged in as: <span style = "font-size: x-large; ">{{UserInfo.UserName}}</span>    </div>
+    
+    
+</h4>
+
+    <h4 class = p-4 style = "border-bottom: 2px solid lawngreen; font-size:x-large;">
+        Account Information
+    </h4>
+    <p class = "ms-2 mt-3 p-3 fs-6 me-2" style = "border-bottom: 2px solid lawngreen;"><span style = "font-weight: bold;"> First Name: </span>  {{UserInfo.FirstName}}       </p>
+    <p class = "ms-2 mt-3 p-3 fs-6 me-2" style = "border-bottom: 2px solid lawngreen;"><span style = "font-weight: bold;"> Last Name:  </span>  {{UserInfo.LastName}}        </p>
+    <p class = "ms-2 mt-3 p-3 fs-6 me-2" style = "border-bottom: 2px solid lawngreen;"><span style = "font-weight: bold;"> User Name:  </span>  {{UserInfo.UserName}}        </p>
+    <p class = "ms-2 mt-3 p-3 fs-6 me-2" style = "border-bottom: 2px solid lawngreen;"><span style = "font-weight: bold;"> Email:      </span>  {{UserInfo.Email}}           </p>
+    <p class = "ms-2 mt-3 p-3 fs-6 me-2" style = "border-bottom: 2px solid lawngreen;"><span style = "font-weight: bold;"> Password:   </span>  {{UserInfo.Password}}        </p>
+
+
+</div>
+
+
+<div *ngIf = "UserInfo != undefined"> 
+   
+
+</div>

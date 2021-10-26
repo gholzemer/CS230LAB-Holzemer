@@ -28,6 +28,11 @@ import { TestComponent } from './Test/Test.component';
 import { TopCardsComponent } from './TopCards/TopCards.component';
 import { HttpClientModule} from '@angular/common/http';
 import { userinfoComponent } from './Header/user-info.component';
+import { loginFormComponent } from './Forums/LoginForm.component';
+import { FormsModule } from '@angular/forms';
+//import { loginFormComponent } from './Forums/LoginForm.component';
+
+
 
 @NgModule({
   declarations: [
@@ -50,14 +55,16 @@ import { userinfoComponent } from './Header/user-info.component';
     AnimatedNavbarComponent,
     ShortCardComponent,
     LongCardsComponent,
-    userinfoComponent
+    userinfoComponent,
+    loginFormComponent
 
 
   ],
   imports: [
     BrowserModule,
     appRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],

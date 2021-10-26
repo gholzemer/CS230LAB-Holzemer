@@ -21,6 +21,7 @@ const routes: Routes = [
     // otherwise redirect to home
     { path: 'Layout', redirectTo: 'Layout' }
     
+    
 ];
 
 export const appRoutingModule = RouterModule.forRoot(routes)
