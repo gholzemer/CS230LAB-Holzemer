@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "razer-75b9b": {
+      "hosting": {
+        "sportify": [
+          "razer-75b9b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "razer-75b9b"
+  }
+}

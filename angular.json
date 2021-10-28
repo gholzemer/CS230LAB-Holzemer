@@ -37,12 +37,10 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css",
               "node_modules/aos/dist/aos.css"
-            ]
-            ,
+            ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
               "node_modules/aos/dist/aos.js"
-
             ]
           },
           "configurations": {
@@ -111,6 +109,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "sportify:build:production",
+            "firebaseProject": "razer-75b9b",
+            "firebaseHostingSite": "razer-75b9b"
           }
         }
       }

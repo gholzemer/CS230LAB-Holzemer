@@ -30,6 +30,11 @@ import { HttpClientModule} from '@angular/common/http';
 import { userinfoComponent } from './Header/user-info.component';
 import { loginFormComponent } from './Forums/LoginForm.component';
 import { FormsModule } from '@angular/forms';
+//import {provideFirebaseApp, initializeApp} from '@angular/fire/app';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+
+
 //import { loginFormComponent } from './Forums/LoginForm.component';
 
 
@@ -64,7 +69,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     appRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'Razer')
+    
 
   ],
   providers: [],

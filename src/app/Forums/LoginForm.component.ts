@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Bar } from './Bar.model';
 import { BarService } from './Bar.service';
 
@@ -10,10 +11,15 @@ styleUrls: ['./LoginForm.component.css'],
 })
 export class loginFormComponent implements OnInit {
     UserInfo: Bar | undefined;
-    
+    //items: Observable<Bar []>;
+    // this.items = this.db.list<Bar>('name of something in database cateory').valueChange*();
     constructor(private BarService:BarService){
+      
         console.log(this.UserInfo);
+       
     }
+
+    
     
     ngOnInit(): void {
         console.log('Shwowing Data');

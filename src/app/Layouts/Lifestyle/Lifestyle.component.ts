@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LifestyleInfoService } from './Lifestyle.service';
 //import { mock_TopCards } from './mock_TopCards';
 import { TopCard } from "src/app/TopCards/TopCard.model";
+import { DatabaseService } from 'src/app/Layouts/Lifestyle/database.service';
 
 @Component({
 selector: 'Lifestyle',
@@ -15,16 +16,14 @@ styles: [`
 
 
 export class LifestyleComponent {
-     //topcards:TopCard[] = [];
-
-    //topcards:TopCard[] = [];
+    
     myCards: TopCard[] = [];
-    constructor(private dataService: LifestyleInfoService){
-         
+    constructor(private dataService: LifestyleInfoService, private dbService:DatabaseService){
+        
         
     }
     ngOnInit(): void{
-        
+        this.dbService.showData();
         this.showUserinfo();
     }
 
