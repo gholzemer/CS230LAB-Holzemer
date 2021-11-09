@@ -20,36 +20,7 @@
 
     
     <form #postForm = "ngForm" (ngSubmit) = "onLoginForm(postForm.value)">
-        <div *ngIf= "UserInfo == undefined">
-        <div class="offcanvas-body">
-            <div class="input-group">
-                <span class="input-group mb-2">First Name</span>
-                <input type="text" id = "FirstName" placeholder = "Ex. John" ngModel name="FirstName" class="form-control">
-            </div>
-            <div class="input-group mt-3">
-                <span class="input-group mb-2">Last Name</span>
-                <input type="text" id = "LastName" placeholder = "Ex. Smith" ngModel name = "LastName" class="form-control">
-            </div>
-            <div class="input-group mt-3">
-                <span class="input-group mb-2">User Name</span>
-                <input type="text" id="UserName" placeholder = "Anything..." ngModel name = "UserName" class="form-control">
-            </div>
-            <div class="input-group mt-3">
-                <span class="input-group mb-2">Password</span>
-                <input type="text" id="Password" placeholder = "Ex. 1234" ngModel name = "Password" class="form-control">
-            </div>
-            <div class="input-group mt-3">
-                <span class="input-group mb-2">Verify Password</span>
-                <input type="text" id="VerifyPassword" placeholder = "Must Match" ngModel name = "VerifyPassword" class="form-control">
-            </div>
-            <div class="input-group mt-3">
-                <span class="input-group mb-2">Email</span>
-                <input type="text" id="Email" placeholder = "Ex. JohnSmith1234@gmail.com" ngModel name = "Email" class="form-control">
-                
-            </div>
-            <button class = "text-end btn btn-dark mt-4 ms-4" type = "submit">Create Account</button>
-        </div>
-    </div>
+       <authComponent></authComponent>
     </form>
 </div>
 <div *ngIf = "UserInfo != undefined" class = "text-white" style = "background-color: rgba(46, 45, 45, 0.815); padding-bottom: 800px; ">

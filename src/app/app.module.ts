@@ -33,6 +33,7 @@ import { FormsModule } from '@angular/forms';
 //import {provideFirebaseApp, initializeApp} from '@angular/fire/app';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+import { authComponent } from 'src/auth/auth.component';
 
 
 //import { loginFormComponent } from './Forums/LoginForm.component';
@@ -61,7 +62,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     ShortCardComponent,
     LongCardsComponent,
     userinfoComponent,
-    loginFormComponent
+    loginFormComponent,
+    authComponent
 
 
   ],

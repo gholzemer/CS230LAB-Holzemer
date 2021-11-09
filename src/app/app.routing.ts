@@ -1,4 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
+import { authComponent } from 'src/auth/auth.component';
 import { LayoutComponent } from './Layout/Layout.component';
 import { CommunityComponent } from './Layouts/Community/Community.component';
 import { consoleComponent } from './Layouts/console.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'Support', component: SupprotComponent },
     { path: 'console', component: consoleComponent },
     { path: 'PC', component: PCComponent },
+    { path: 'auth', component: authComponent },
     // otherwise redirect to home
     { path: 'Layout', redirectTo: 'Layout' }
     
